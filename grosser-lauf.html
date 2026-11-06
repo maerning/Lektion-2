@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Großer Wörter-Lauf – Latein Lektion 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;height:100%;background:#1d1530;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+  #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  canvas{display:block;outline:none;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.5);cursor:pointer}
+  .btn{position:fixed;top:12px;width:46px;height:46px;border-radius:50%;border:3px solid #fff;background:rgba(0,0,0,.35);color:#fff;font-size:22px;cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center}
+  #mute{right:12px} #full{right:68px}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="c" width="1280" height="720" tabindex="0"></canvas></div>
+<a class="btn" id="home" href="index.html" title="Zurück zum Menü" style="right:124px;text-decoration:none">🏠</a>
+<button class="btn" id="mute" title="Ton an/aus">🔊</button>
+<button class="btn" id="full" title="Vollbild">⛶</button>
+<script src="woerter.js"></script>
+<script>window.CFG={img:{bg:'img/circus.jpg',held:'img/incitatus.png',gegner:'img/pomponius.png'}, key:'l12VokBest', round:30, title:'GROSSER WÖRTER-LAUF', sub:'Alle Vokabeln aus Lektion 1 und 2', ask:'Was heißt …', hitText:'Pomponius!', gegnerH:150, lines:['30 Wörter aus Lektion 1 und 2:','Spring durch das richtige Schild!','Oben = springen • Unten = weiterlaufen','Achte auf ALLE Bedeutungen!'], deck:()=>{const all=WOERTER.L1.concat(WOERTER.L2); return WOERTER.vokabeln(all, all);}, winText:'Du kennst Lektion 1 und 2!'};</script>
+<script src="engine.js"></script>
+</body>
+</html>

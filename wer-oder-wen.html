@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Wer oder wen? – Latein Lektion 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;height:100%;background:#1d1530;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+  #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  canvas{display:block;outline:none;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.5);cursor:pointer}
+  .btn{position:fixed;top:12px;width:46px;height:46px;border-radius:50%;border:3px solid #fff;background:rgba(0,0,0,.35);color:#fff;font-size:22px;cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center}
+  #mute{right:12px} #full{right:68px}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="c" width="1280" height="720" tabindex="0"></canvas></div>
+<a class="btn" id="home" href="index.html" title="Zurück zum Menü" style="right:124px;text-decoration:none">🏠</a>
+<button class="btn" id="mute" title="Ton an/aus">🔊</button>
+<button class="btn" id="full" title="Vollbild">⛶</button>
+<script src="woerter.js"></script>
+<script>window.CFG={img:{bg:'img/stall.jpg',held:'img/incitatus.png',gegner:'img/pomponius.png'}, key:'l2KasusBest', round:24, title:'WER ODER WEN?', sub:'Nominativ oder Akkusativ?', ask:'Welcher Kasus ist …', hitText:'Pomponius!', gegnerH:150, lines:['Oben = Nominativ (Wer?) • springen','Unten = Akkusativ (Wen?) • weiterlaufen','Schau genau auf die Endung!','Spring über Pomponius!'], deck:()=>WOERTER.kasus(), winText:'Endungen? Kein Problem für dich!'};</script>
+<script src="engine.js"></script>
+</body>
+</html>

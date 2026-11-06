@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prima-Spiele Lektion 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;font-family:"Fredoka","Arial Rounded MT Bold","Trebuchet MS",sans-serif;color:#3b2a1a}
+  body{background:#2a1d3d url(img/forum.jpg) center/cover fixed}
+  body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(20,10,40,.35),rgba(20,10,40,.55));z-index:0}
+  main{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:22px 20px 30px}
+  header{text-align:center;margin-bottom:18px}
+  h1{margin:0;font-size:clamp(40px,6.5vw,78px);color:#ffd23f;-webkit-text-stroke:3px #7d0f1c;paint-order:stroke fill;text-shadow:0 6px 0 #7d0f1c,0 10px 24px rgba(0,0,0,.4);letter-spacing:1px}
+  header p{margin:6px 0 0;color:#fff;font-size:clamp(18px,2.4vw,26px);font-weight:500;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pic{height:170px}
+  @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+  a.card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#fffaf0;border:6px solid #d4a017;border-radius:26px;overflow:hidden;box-shadow:0 8px 0 #9c7410,0 14px 26px rgba(0,0,0,.35);transition:transform .15s}
+  a.card:hover,a.card:focus-visible{transform:translateY(-6px) rotate(-.6deg)}
+  a.card:active{transform:translateY(2px)}
+  .pic{position:relative;height:150px;background-size:cover;background-position:center}
+  .pic img{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);height:138px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.35))}
+  .num{position:absolute;top:8px;left:10px;background:#7d0f1c;color:#ffd23f;border:3px solid #ffd23f;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+  .tag{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.6);color:#fff;border-radius:14px;padding:3px 10px;font-size:15px}
+  .txt{padding:10px 14px 14px;text-align:center}
+  .txt b{display:block;font-size:24px;line-height:1.1;color:#7d0f1c}
+  .txt span{display:block;font-size:16px;font-weight:500;color:#6b4f2a;margin-top:4px;line-height:1.25}
+  footer{text-align:center;color:#fff;margin-top:20px;font-size:16px;font-weight:500;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+  #full{position:fixed;top:12px;right:12px;z-index:3;width:46px;height:46px;border-radius:50%;border:3px solid #fff;background:rgba(0,0,0,.35);color:#fff;font-size:22px;cursor:pointer}
+</style>
+</head>
+<body>
+<button id="full" title="Vollbild">⛶</button>
+<main>
+  <header>
+    <h1>PRIMA-SPIELE · LEKTION 2</h1>
+    <p>Möhren weisen den Weg – hilf Incitatus, Pomponius zu entkommen!</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="vokabel-sprung.html"><div class="pic" style="background-image:url(img/forum.jpg)"><img src="img/incitatus.png" alt="" style="height:120px"><div class="num">I</div><div class="tag">📖 20 Wörter</div></div>
+      <div class="txt"><b>Vokabel-Sprung</b><span>Alle Lernwörter aus Lektion 2 – mit ALLEN Bedeutungen!</span></div></a>
+    <a class="card" href="akkusativ-jagd.html"><div class="pic" style="background-image:url(img/aventin.jpg)"><img src="img/incitatus.png" alt="" style="left:32%;height:110px"><img src="img/pomponius.png" alt="" style="left:74%;height:130px"><div class="num">II</div><div class="tag">-am -um -em</div></div>
+      <div class="txt"><b>Akkusativ-Jagd</b><span>Wen oder was? Finde die richtige Akkusativ-Form!</span></div></a>
+    <a class="card" href="wer-oder-wen.html"><div class="pic" style="background-image:url(img/stall.jpg)"><img src="img/pomponius.png" alt="" style="height:140px"><div class="num">III</div><div class="tag">Wer? / Wen?</div></div>
+      <div class="txt"><b>Wer oder wen?</b><span>Nominativ oder Akkusativ? Schau auf die Endung!</span></div></a>
+    <a class="card" href="grosser-lauf.html"><div class="pic" style="background-image:url(img/circus.jpg)"><img src="img/incitatus.png" alt="" style="height:120px"><div class="num">IV</div><div class="tag">📖 L1 + L2</div></div>
+      <div class="txt"><b>Großer Wörter-Lauf</b><span>30 Vokabeln aus Lektion 1 und 2 gemischt!</span></div></a>
+  </div>
+  <footer>Mit dem 🏠-Knopf oben links kommst du aus jedem Spiel wieder hierher zurück.</footer>
+</main>
+<script>
+document.getElementById('full').onclick = e => {
+  const d = document.documentElement; e.currentTarget.blur();
+  try { const r = !document.fullscreenElement ? (d.requestFullscreen || d.webkitRequestFullscreen || (() => {})).call(d) : document.exitFullscreen(); if (r && r.catch) r.catch(() => {}); } catch (err) {}
+};
+</script>
+</body>
+</html>
